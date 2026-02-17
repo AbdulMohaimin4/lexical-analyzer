@@ -29,6 +29,10 @@ import java.io.*;
   private void reportError(String type, String reason) {
     errorHandler.reportError(type, yyline + 1, yycolumn + 1, yytext(), reason);
   }
+
+  public int getLineCount() {
+    return yyline + 1;
+}
 %}
 
 /* Macro Definitions */
@@ -96,8 +100,7 @@ MultiLineComment  = #\* ([^*] | \*+ [^#])* \*+#
   \"([^\r\n\"\\]|\\([\"\\ntr]))* { reportError("Unterminated String", "String reaches end of line"); }
   #\* ([^*] | \*+ [^#])*         { reportError("Unclosed Comment", "Multi-line comment was not closed"); }
   [a-z][a-z0-9_]*                { reportError("Invalid Identifier", "Must start with uppercase"); }
-  [+-]?[0-9]*\.[0-9]{7,}         { reportError("Malformed Float", "Too many decimal places"); }
-  [+-]?[0-9]*\.                  { reportError("Malformed Float", "Trailing dot"); }
+  [+-]?[0-9]*\.                  { reportError("Malformed Float", "Trailing dot or invalid format"); }
   
   .                              { reportError("Invalid Character", "Character not recognized"); }
 }
