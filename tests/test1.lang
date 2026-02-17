@@ -1,0 +1,16 @@
+start
+    declare X_var = 10;
+    declare Y_val = -20.5e2;
+    loop (condition X_var < 100) {
+        output "Value: " + X_var;
+        X_var = X_var + 1;
+    }
+    ## Single line comment
+    #* 
+       Multi-line 
+       comment 
+    *#
+    true false
+    ++ -- ** == != <= >= && || ! += -= *= /= =
+    ( ) { } [ ] , ; :
+finish

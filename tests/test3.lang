@@ -1,0 +1,6 @@
+start
+    output "Line 1\nLine 2\tTabbed";
+    output "Escaped quota: \" and backslash: \\";
+    declare C = 'A';
+    declare D = '\n';
+finish

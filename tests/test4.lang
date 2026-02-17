@@ -1,0 +1,10 @@
+start
+    declare lowercase_var = 10; ## Error: Identifier must start with uppercase
+    declare @invalidChar = 5;   ## Error: Invalid character @
+    declare Long_Identifier_That_Exceeds_Thirty_One_Characters = 1; ## Error: Too long
+    declare FloatEr = 10.;      ## Error: Trailing dot
+    declare FloatEr2 = 10.1234567; ## Error: Too many decimals
+    output "Unterminated string;
+    #* 
+       Unclosed multi-line comment
+finish

@@ -1,0 +1,8 @@
+start
+    declare A = 10;
+    declare B = 20;
+    declare C = (A + B) * 2 / 5 ** 2;
+    condition (A == B && B != C || !(A < C)) {
+        output A;
+    }
+finish

@@ -1,0 +1,54 @@
+Custom Language Grammar (Lexical Rules)
+
+1. Keywords (Case-Sensitive):
+   start, finish, loop, condition, declare, output, input, function, return, break, continue, else
+
+2. Identifiers:
+   Regex: [A-Z][a-z0-9_]{0,30}
+   Rules: Must start with an uppercase letter (A-Z), followed by lowercase letters, digits, or underscores. Maximum 31 characters.
+
+3. Integer Literals:
+   Regex: [+-]?[0-9]+
+   Examples: 42, +100, -567, 0
+
+4. Floating-Point Literals:
+   Regex: [+-]?[0-9]+\.[0-9]{1,6}([eE][+-]?[0-9]+)?
+   Rules: Up to 6 decimal places. Supports scientific notation.
+
+5. String Literals:
+   Regex: "([ ^"\\\n]|\\["\\ntr])*"
+   Escape Sequences: \", \\, \n, \t, \r
+
+6. Character Literals:
+   Regex: '([ ^'\\\n]|\\['\\ntr])'
+
+7. Boolean Literals:
+   Regex: true | false
+
+8. Operators:
+   Arithmetic: +, -, *, /, %, ** (exponentiation)
+   Relational: ==, !=, <=, >=, <, >
+   Logical: &&, ||, !
+   Assignment: =, +=, -=, *=, /=
+   Inc/Dec: ++, --
+
+9. Punctuators:
+   ( ) { } [ ] , ; :
+
+10. Comments:
+    Single-line: ## ...
+    Multi-line: #* ... *# (Nested comments supported as bonus)
+
+11. Order of Priority:
+    1. Multi-line comments
+    2. Single-line comments
+    3. Multi-character operators
+    4. Keywords
+    5. Boolean literals
+    6. Identifiers
+    7. Floating-point literals
+    8. Integer literals
+    9. String/character literals
+    10. Single-character operators
+    11. Punctuators
+    12. Whitespace

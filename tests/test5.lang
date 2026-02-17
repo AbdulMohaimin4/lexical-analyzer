@@ -1,0 +1,11 @@
+## Single line comment at start
+start
+    #* Basic 
+       multi-line *#
+    output "Test";
+    #* Nested 
+       #* level 2 *#
+       back to 1 
+    *#
+finish
+## End comment
