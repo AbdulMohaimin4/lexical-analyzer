@@ -1,9 +1,9 @@
 # Lexical Analyzer Implementation - Assignment 01
 
 ## Team Details
-- **Student 1:** [Roll Number 1]
-- **Student 2:** [Roll Number 2]
-- **Section:** [A/B/C]
+- **Shazil Rehman** | 23i-0095
+- **Abdul Mohaimin** |  23i-0652
+- **Section:** G
 
 ## Language Overview
 - **Language Name:** CC-Lang
@@ -54,3 +54,4 @@ Detailed rules can be found in `docs/LanguageGrammar.txt`.
 ### Operators & Punctuators
 - Comprehensive support for arithmetic, logical, relational, and assignment operators.
 - Punctuators: `(`, `)`, `{`, `}`, `[`, `]`, `,`, `;`, `:`.
+
